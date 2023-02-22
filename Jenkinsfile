@@ -1,16 +1,17 @@
 pipeline {
     agent any
-
     stages {
-        stage('git clone') {
-            steps {
-                sh 'https://github.com/Laxman-gaur/nodejs-sample-app.git' 
-            }
-        }
         stage('change directory') {
             steps {
-                sh 'cd /var/lib/jenkins/workspace/nodejs-sample-app'
+                sh 'cd /var/lib/jenkins/workspace'
                 sh 'pwd'
+            }
+        }
+
+        stage('git clone') {
+            steps {
+                sh 'https://github.com/Laxman-gaur/nodejs-sample-app.git'
+                sh 'cd ./nodejs-sample-app'
             }
         }
         stage('install the dependencies') {
