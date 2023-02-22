@@ -22,12 +22,12 @@ pipeline {
         }
         stage('deploy to production') {
             steps {
-                sh 'pm2 start index.js' 
+                sh 'npm start index.js' 
             }
         }
         stage('pm2 status') {
             steps {
-                sh 'pm2 list' 
+                sh 'curl localhost:5000' 
             }
         }
     }
