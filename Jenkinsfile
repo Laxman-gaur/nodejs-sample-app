@@ -22,7 +22,7 @@ pipeline {
         }
         stage('deploy to production') {
             steps {
-                sh 'npm start index.js' 
+                sh 'pm2 start index.js' 
             }
         }
     }
