@@ -10,7 +10,7 @@ pipeline {
 
         stage('git clone') {
             steps {
-                sh 'sudo git clone https://github.com/Laxman-gaur/nodejs-sample-app.git'
+                sh 'sudo git clone https://github.com/Laxman-gaur/nodejs-sample-app.git -S'
                 sh 'cd ./nodejs-sample-app'
             }
         }
