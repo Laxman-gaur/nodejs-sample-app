@@ -25,5 +25,10 @@ pipeline {
                 sh 'node index.js' 
             }
         }
+        stage('pm2 status') {
+            steps {
+                sh 'pm2 list' 
+            }
+        }
     }
 }
