@@ -1,8 +1,7 @@
 pipeline {
     agent any
-
     stages {
-        stage('git clone ') {
+        stage('git clone') {
             steps {
                 sh 'https://github.com/Laxman-gaur/nodejs-sample-app.git' 
             }
