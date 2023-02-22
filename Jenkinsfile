@@ -9,7 +9,7 @@ pipeline {
         }
         stage('git clone') {
             steps {
-                //sh 'git clone https://github.com/Laxman-gaur/nodejs-sample-app.git'
+                sh 'git clone https://github.com/Laxman-gaur/nodejs-sample-app.git'
                 //sh 'cd ./nodejs-sample-app'
             }
         }
